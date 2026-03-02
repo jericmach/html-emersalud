@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMERSALUD DEL CAUCA S.A.S | Servicios Prehospitalarios</title>
+    <style>
+        /* Paleta de Colores Manual de Marca */
+        :root {
+            --azul-principal: #005CA9; /* [cite: 41] */
+            --rojo-emergencia: #D20A11; /* [cite: 43] */
+            --gris-oscuro: #575757; /* [cite: 44] */
+            --gris-claro: #C6C6C6; /* [cite: 45] */
+            --blanco: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--gris-oscuro);
+        }
+
+        /* Navegación */
+        header {
+            background: var(--blanco);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--azul-principal);
+        }
+
+        .btn-emergencia {
+            background: var(--rojo-emergencia);
+            color: var(--blanco);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        /* Sección Hero */
+        .hero {
+            background: linear-gradient(rgba(0, 92, 169, 0.8), rgba(0, 92, 169, 0.8)), url('https://images.unsplash.com/photo-1587745416684-47953f16f002?auto=format&fit=crop&q=80&w=1000') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--blanco);
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+
+        /* Servicios */
+        .servicios {
+            padding: 5rem 5%;
+            text-align: center;
+        }
+
+        .grid-servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            padding: 2rem;
+            border-bottom: 5px solid var(--azul-principal);
+            background: #f9f9f9;
+            transition: 0.3s;
+        }
+
+        .card:hover { transform: translateY(-10px); background: var(--blanco); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .card h3 { color: var(--azul-principal); margin-bottom: 1rem; }
+
+        /* Footer */
+        footer {
+            background: var(--gris-oscuro);
+            color: var(--blanco);
+            padding: 3rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-info h4 { margin-bottom: 1rem; color: var(--gris-claro); }
+        .footer-info p { font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">EMERSALUD DEL CAUCA</div>
+        <nav>
+            <a href="tel:3234448048" class="btn-emergencia">Llamar: 323 444 8048</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>GRUPO EMPRESARIAL EMERSALUD</h1>
+        <p>Servicios Prehospitalarios y Traslados en Popayán y todo el país.</p>
+        <a href="mailto:emersaluddelcauca@gmail.com" style="color: white; text-decoration: underline;">Contactar por Correo</a>
+    </section>
+
+    <section class="servicios">
+        <h2>NUESTROS SERVICIOS</h2>
+        <div class="grid-servicios">
+            <div class="card">
+                <h3>Traslados Básicos</h3>
+                <p>Movilización segura de pacientes estables dentro y fuera de la ciudad.</p>
+            </div>
+            <div class="card">
+                <h3>Medicalizados</h3>
+                <p>Unidades de cuidados intensivos con personal médico especializado.</p>
+            </div>
+            <div class="card">
+                <h3>Cubrimiento de Eventos</h3>
+                <p>Asistencia médica para eventos deportivos, culturales y empresariales.</p>
+            </div>
+            <div class="card">
+                <h3>SOAT Traslados</h3>
+                <p>Atención inmediata en accidentes de tránsito con cobertura total.</p>
+            </div>
+            <div class="card">
+                <h3>Labores Sociales</h3>
+                <p>Compromiso con la salud y bienestar de la comunidad del Cauca.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-info">
+            <h4>EMERSALUD DEL CAUCA S.A.S</h4>
+            <p>NIT: 901268048-2</p>
+            <p>Popayán, Cauca, Colombia</p>
+        </div>
+        <div class="footer-info">
+            <h4>CONTACTO</h4>
+            <p>Teléfono: 323 444 8048</p>
+            <p>Email: emersaluddelcauca@gmail.com</p>
+        </div>
+        <div class="footer-info">
+            <h4>HORARIO</h4>
+            <p>Atención de Emergencias: 24 Horas / 7 Días</p>
+        </div>
+    </footer>
+
+</body>
+</html>

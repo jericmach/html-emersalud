@@ -2,44 +2,80 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>EMERSALUD DEL CAUCA | Ambulancias y Rescate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMERSALUD DEL CAUCA | Ambulancias Popayán</title>
     <style>
         :root {
-            --azul: #005CA9;
-            --rojo: #D20A11;
-            --gris: #575757;
+            --azul-corp: #005CA9; /* */
+            --rojo-corp: #D20A11; /* */
+            --gris-texto: #575757; /* */
+            --blanco: #ffffff;
         }
-        body { font-family: 'Arial', sans-serif; margin: 0; color: var(--gris); }
-        .header { display: flex; justify-content: space-between; padding: 20px 5%; align-items: center; border-bottom: 3px solid var(--azul); }
-        .btn-call { background: var(--rojo); color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; }
-        .hero { background: var(--azul); color: white; padding: 60px 5%; text-align: center; }
-        .servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 50px 5%; }
-        .card { border: 1px solid #ddd; padding: 20px; text-align: center; border-radius: 10px; transition: 0.3s; }
-        .card:hover { border-color: var(--rojo); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .card h3 { color: var(--azul); }
-        footer { background: #333; color: white; padding: 30px 5%; text-align: center; }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <div style="font-size: 24px; font-weight: bold; color: var(--azul);">EMERSALUD <span style="color:var(--rojo)">ES</span></div>
-        <a href="tel:3234448048" class="btn-call">📞 EMERGENCIAS: 323 444 8048</a>
-    </div>
-    <div class="hero">
-        <h1>GRUPO EMPRESARIAL EMERSALUD DEL CAUCA S.A.S</h1>
-        <p>Líderes en traslados básicos y medicalizados en Popayán</p>
-    </div>
-    <div class="servicios-grid">
-        <div class="card"><h3>Traslados Básicos</h3><p>Urbano y Rural</p></div>
-        <div class="card"><h3>Medicalizados</h3><p>Soporte Vital Avanzado</p></div>
-        <div class="card"><h3>SOAT</h3><p>Accidentes de Tránsito</p></div>
-        <div class="card"><h3>Eventos</h3><p>Cubrimiento Integral</p></div>
-        <div class="card"><h3>Labores Sociales</h3><p>Apoyo Comunitario</p></div>
-        <div class="card"><h3>Nacional</h3><p>Traslados fuera de la ciudad</p></div>
-    </div>
-    <footer>
-        <p>NIT: 901268048-2 | emersaluddelcauca@gmail.com</p>
-        <p>Popayán - Cauca</p>
-    </footer>
-</body>
-</html>
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            color: var(--gris-texto);
+        }
+
+        /* Cabecera */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: var(--blanco);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container img {
+            height: 60px; /* Aquí se visualizará el logo ES */
+        }
+
+        /* Banner Principal con Ambulancia */
+        .hero {
+            background: linear-gradient(rgba(0, 92, 169, 0.7), rgba(0, 92, 169, 0.7)), 
+                        url('https://images.unsplash.com/photo-1587745416684-47953f16f002?q=80&w=1000'); /* Representación de ambulancia */
+            background-size: cover;
+            background-position: center;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--blanco);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+
+        /* Botón WhatsApp */
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+            padding: 18px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: inline-flex;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            transform: scale(1.05);
+            background-color: #128c7e;
+        }
+
+        /* Sección de Servicios */
+        .servicios {
+            padding: 50px 5%;
+            background: #f4f4f4;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px

@@ -3,148 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMERSALUD DEL CAUCA | Ambulancias Popayán</title>
+    <title>EMERSALUD DEL CAUCA S.A.S</title>
     <style>
         :root {
-            --azul-corp: #005CA9; /* [cite: 41] */
-            --rojo-corp: #D20A11; /* [cite: 43] */
-            --gris-texto: #575757; /* [cite: 44] */
+            --azul: #005CA9;
+            --rojo: #D20A11;
             --blanco: #ffffff;
         }
+        body { font-family: 'Arial', sans-serif; margin: 0; text-align: center; background-color: var(--azul); color: var(--blanco); }
+        
+        .container { padding: 50px 20px; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; text-transform: uppercase; }
+        p { font-size: 1.2rem; margin-bottom: 30px; }
 
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            color: var(--gris-texto);
-        }
-
-        /* Cabecera */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 5%;
-            background: var(--blanco);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo-container img {
-            height: 60px; /* Aquí se visualizará el logo ES [cite: 67] */
-        }
-
-        /* Banner Principal con Ambulancia */
-        .hero {
-            background: linear-gradient(rgba(0, 92, 169, 0.7), rgba(0, 92, 169, 0.7)), 
-                        url('https://images.unsplash.com/photo-1587745416684-47953f16f002?q=80&w=1000'); /* Representación de ambulancia */
-            background-size: cover;
-            background-position: center;
-            height: 450px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: var(--blanco);
-            text-align: center;
+        /* Contenedor de la Ambulancia */
+        .ambulancia-box {
+            background-color: var(--blanco);
+            border-radius: 20px;
             padding: 20px;
+            display: inline-block;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            max-width: 90%;
         }
 
-        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .ambulancia-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
 
         /* Botón WhatsApp */
         .btn-whatsapp {
-            background-color: #25d366;
+            display: inline-block;
+            margin-top: 30px;
+            background-color: #25D366;
             color: white;
-            padding: 18px 30px;
+            padding: 15px 30px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.2rem;
-            display: inline-flex;
-            align-items: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-size: 1.1rem;
             transition: 0.3s;
         }
-
-        .btn-whatsapp:hover {
-            transform: scale(1.05);
-            background-color: #128c7e;
-        }
-
-        /* Sección de Servicios */
-        .servicios {
-            padding: 50px 5%;
-            background: #f4f4f4;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: var(--blanco);
-            padding: 25px;
-            border-radius: 10px;
-            border-top: 5px solid var(--rojo-corp);
-            text-align: center;
-        }
-
-        .card h3 { color: var(--azul-corp); margin-bottom: 15px; }
-
-        footer {
-            background: var(--azul-corp);
-            color: white;
-            padding: 40px 5%;
-            text-align: center;
-        }
+        .btn-whatsapp:hover { transform: scale(1.05); background-color: #128c7e; }
     </style>
 </head>
 <body>
 
-    <header class="header">
-        <div class="logo-container">
-            <div style="font-weight: bold; color: var(--azul-corp); font-size: 1.5rem;">
-                EMERSALUD <span style="color: var(--rojo-corp);">DEL CAUCA</span>
-            </div>
-        </div>
-        <a href="https://wa.me/573234448048" class="btn-whatsapp">Pedir Ambulancia</a>
-    </header>
-
-    <section class="hero">
+    <div class="container">
         <h1>EMERSALUD DEL CAUCA S.A.S</h1>
         <p>Servicios Prehospitalarios 24/7 en Popayán</p>
+
+        <div class="ambulancia-box">
+            <img src="https://img.freepik.com/vector-premium/ambulancia-aislada-blanco-estilo-plano-ilustracion-vectorial_108420-137.jpg" 
+                 alt="Ambulancia Emersalud" 
+                 class="ambulancia-img">
+        </div>
+
         <br>
-        <div style="background: white; padding: 10px; border-radius: 10px;">
-             <img src="https://via.placeholder.com/300x150?text=AMBULANCIA+EMERSALUD" alt="Ambulancia Emersalud">
-        </div>
-    </section>
-
-    <section class="servicios">
-        <div class="card">
-            <h3>🚑 Traslados Básicos</h3>
-            <p>Atención y transporte de pacientes dentro y fuera de la ciudad.</p>
-        </div>
-        <div class="card">
-            <h3>🏥 Medicalizados</h3>
-            <p>Unidades de soporte vital avanzado con personal experto.</p>
-        </div>
-        <div class="card">
-            <h3>🚗 Traslados SOAT</h3>
-            <p>Atención inmediata para víctimas de accidentes de tránsito.</p>
-        </div>
-        <div class="card">
-            <h3>🏟️ Eventos</h3>
-            <p>Cubrimiento médico especializado para eventos masivos y labores sociales.</p>
-        </div>
-    </section>
-
-    <footer>
-        <p><strong>Grupo Empresarial Emersalud del Cauca S.A.S</strong></p>
-        <p>NIT: 901268048-2</p>
-        <p>Popayán, Cauca | Cel: 323 444 8048</p>
-        <p>Email: emersaluddelcauca@gmail.com</p>
-    </footer>
+        <a href="https://wa.me/573234448048" class="btn-whatsapp">
+            🟢 PEDIR AMBULANCIA (WhatsApp)
+        </a>
+    </div>
 
 </body>
 </html>

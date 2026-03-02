@@ -3,166 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMERSALUD DEL CAUCA S.A.S</title>
+    <title>EMERSALUD DEL CAUCA S.A.S | Servicios Prehospitalarios</title>
     <style>
         :root {
-            --azul-corp: #005CA9; /* [cite: 41] */
-            --rojo-corp: #D20A11; /* [cite: 43] */
-            --gris-texto: #575757; /* [cite: 44] */
+            --azul-corp: #005CA9;
+            --rojo-corp: #D20A11;
+            --gris-oscuro: #575757;
             --blanco: #ffffff;
+            --verde-whatsapp: #25D366;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
-            background-color: #f0f4f8;
-            color: var(--gris-texto);
+            background-color: #f4f7f9;
+            color: var(--gris-oscuro);
         }
 
-        /* Cabecera Superior */
+        /* Navegación Profesional */
         header {
             background: var(--blanco);
-            padding: 15px 5%;
+            padding: 10px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        .brand {
+        .logo-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Isotipo "ES" Estilizado con CSS para evitar imágenes rotas */
+        .isotipo {
+            background: var(--azul-corp);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
             font-weight: bold;
-            font-size: 1.2rem;
-            color: var(--azul-corp);
+            font-style: italic;
+            border-right: 4px solid var(--rojo-corp);
         }
 
-        .brand span { color: var(--rojo-corp); }
+        .nombre-empresa {
+            font-weight: bold;
+            color: var(--azul-corp);
+            font-size: 1.2rem;
+        }
+
+        .nombre-empresa span { color: var(--rojo-corp); }
 
         /* Banner Principal (Hero) */
         .hero {
-            background-color: var(--azul-corp);
+            background: linear-gradient(135deg, var(--azul-corp) 0%, #003d73 100%);
             color: var(--blanco);
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
 
-        .hero h1 { 
-            font-size: 2.2rem; 
-            margin: 0; 
-            letter-spacing: 1px;
-        }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; text-transform: uppercase; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 40px; }
 
-        .hero p { opacity: 0.9; margin: 10px 0 30px 0; }
-
-        /* Contenedor de Ambulancia con SVG Integrado */
-        .ambulancia-container {
+        /* Contenedor del Logo Central */
+        .logo-central-container {
             background: var(--blanco);
             display: inline-block;
-            padding: 30px;
+            padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            margin-bottom: -80px; /* Efecto de superposición */
-            position: relative;
-            z-index: 10;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
         }
 
-        .ambulancia-svg {
-            width: 150px;
-            fill: var(--rojo-corp);
-        }
-
-        /* Botón de WhatsApp */
-        .btn-pedir {
-            display: inline-block;
-            background-color: #25D366;
+        /* Botón de Acción Principal */
+        .btn-whatsapp {
+            background-color: var(--verde-whatsapp);
             color: white;
-            padding: 18px 40px;
+            padding: 20px 40px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.2rem;
-            margin-top: 110px;
-            transition: 0.3s;
+            font-size: 1.3rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: 0.3s;
         }
 
-        .btn-pedir:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5); }
+        .btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6); }
 
-        /* Cuadrícula de Servicios */
-        .servicios-section {
-            padding: 120px 5% 60px 5%;
+        /* Sección de Servicios */
+        .servicios {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
+            padding: 60px 5%;
         }
 
         .card {
             background: var(--blanco);
             padding: 30px;
-            border-radius: 12px;
+            border-radius: 15px;
             text-align: center;
-            border-top: 5px solid var(--rojo-corp);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-top: 6px solid var(--rojo-corp);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
         }
 
-        .card h3 { color: var(--azul-corp); margin-bottom: 15px; }
-
-        footer {
-            background: var(--gris-texto);
-            color: white;
-            padding: 30px;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="brand">EMERSALUD <span>DEL CAUCA</span></div>
-        <div style="font-weight: bold; color: var(--azul-corp);">323 444 8048</div>
-    </header>
-
-    <section class="hero">
-        <h1>EMERSALUD DEL CAUCA S.A.S</h1>
-        <p>Servicios Prehospitalarios 24/7 en Popayán</p>
-
-        <div class="ambulancia-container">
-            <svg class="ambulancia-svg" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                <path d="M492 192h-44v-48c0-26.51-21.49-48-48-48h-80v-40c0-13.255-10.745-24-24-24s-24 10.745-24 24v40h-80c-26.51 0-48 21.49-48 48v48H20c-11.046 0-20 8.954-20 20v192c0 11.046 8.954 20 20 20h30.592c8.114 26.697 33.102 46.154 62.408 46.154s54.294-19.457 62.408-46.154H336.59c8.114 26.697 33.102 46.154 62.408 46.154s54.294-19.457 62.408-46.154H492c11.046 0 20-8.954 20-20V212c0-11.046-8.954-20-20-20zM312 240h-40v40c0 4.418-3.582 8-8 8s-8-3.582-8-8v-40h-40c-4.418 0-8-3.582-8-8s3.582-8 8-8h40v-40c0-4.418 3.582-8 8-8s8 3.582 8 8v40h40c4.418 0 8 3.582 8 8s-3.582 8-8 8z"/>
-            </svg>
-            <div style="color: var(--azul-corp); font-weight: bold; margin-top:10px;">RESCATE VITAL</div>
-        </div>
-
-        <br>
-        <a href="https://wa.me/573234448048" class="btn-pedir">
-            PEDIR AMBULANCIA (WhatsApp)
-        </a>
-    </section>
-
-    <section class="servicios-section">
-        <div class="card">
-            <h3>🚑 Traslados Básicos</h3>
-            <p>Atención y transporte de pacientes estables dentro y fuera de la ciudad.</p>
-        </div>
-        <div class="card">
-            <h3>🏥 Medicalizados</h3>
-            <p>Unidades de soporte vital avanzado con personal médico experto.</p>
-        </div>
-        <div class="card">
-            <h3>🚓 Traslados SOAT</h3>
-            <p>Atención inmediata para víctimas de accidentes de tránsito.</p>
-        </div>
-        <div class="card">
-            <h3>🏟️ Eventos</h3>
-            <p>Cubrimiento médico especializado para eventos masivos y labores sociales.</p>
-        </div>
-    </section>
-
-    <footer>
-        <p><strong>Grupo Empresarial Emersalud del Cauca S.A.S</strong></p>
-        <p>NIT: 901268048-2 | Popayán, Cauca | Tel: 323 444 8048</p>
-        <p>Email: emersaluddelcauca@gmail.com</p>
-    </footer>
-
-</body>
-</html>
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: var(--azul-corp); margin-bottom: 15px; font-size: 1.4rem

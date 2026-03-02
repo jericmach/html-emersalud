@@ -6,9 +6,9 @@
     <title>EMERSALUD DEL CAUCA | Ambulancias Popayán</title>
     <style>
         :root {
-            --azul-corp: #005CA9; /* */
-            --rojo-corp: #D20A11; /* */
-            --gris-texto: #575757; /* */
+            --azul-corp: #005CA9; /* [cite: 41] */
+            --rojo-corp: #D20A11; /* [cite: 43] */
+            --gris-texto: #575757; /* [cite: 44] */
             --blanco: #ffffff;
         }
 
@@ -32,7 +32,7 @@
         }
 
         .logo-container img {
-            height: 60px; /* Aquí se visualizará el logo ES */
+            height: 60px; /* Aquí se visualizará el logo ES [cite: 67] */
         }
 
         /* Banner Principal con Ambulancia */
@@ -78,4 +78,73 @@
             padding: 50px 5%;
             background: #f4f4f4;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--blanco);
+            padding: 25px;
+            border-radius: 10px;
+            border-top: 5px solid var(--rojo-corp);
+            text-align: center;
+        }
+
+        .card h3 { color: var(--azul-corp); margin-bottom: 15px; }
+
+        footer {
+            background: var(--azul-corp);
+            color: white;
+            padding: 40px 5%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-container">
+            <div style="font-weight: bold; color: var(--azul-corp); font-size: 1.5rem;">
+                EMERSALUD <span style="color: var(--rojo-corp);">DEL CAUCA</span>
+            </div>
+        </div>
+        <a href="https://wa.me/573234448048" class="btn-whatsapp">Pedir Ambulancia</a>
+    </header>
+
+    <section class="hero">
+        <h1>EMERSALUD DEL CAUCA S.A.S</h1>
+        <p>Servicios Prehospitalarios 24/7 en Popayán</p>
+        <br>
+        <div style="background: white; padding: 10px; border-radius: 10px;">
+             <img src="https://via.placeholder.com/300x150?text=AMBULANCIA+EMERSALUD" alt="Ambulancia Emersalud">
+        </div>
+    </section>
+
+    <section class="servicios">
+        <div class="card">
+            <h3>🚑 Traslados Básicos</h3>
+            <p>Atención y transporte de pacientes dentro y fuera de la ciudad.</p>
+        </div>
+        <div class="card">
+            <h3>🏥 Medicalizados</h3>
+            <p>Unidades de soporte vital avanzado con personal experto.</p>
+        </div>
+        <div class="card">
+            <h3>🚗 Traslados SOAT</h3>
+            <p>Atención inmediata para víctimas de accidentes de tránsito.</p>
+        </div>
+        <div class="card">
+            <h3>🏟️ Eventos</h3>
+            <p>Cubrimiento médico especializado para eventos masivos y labores sociales.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>Grupo Empresarial Emersalud del Cauca S.A.S</strong></p>
+        <p>NIT: 901268048-2</p>
+        <p>Popayán, Cauca | Cel: 323 444 8048</p>
+        <p>Email: emersaluddelcauca@gmail.com</p>
+    </footer>
+
+</body>
+</html>
